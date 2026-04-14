@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = '015c7653dcd03353e4ade3deeb6c4753415eae52'
+AESD_ASSIGNMENTS_VERSION = '64bb98ea0952d6139cf36c46065e56220e8779d8'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -20,13 +20,13 @@ endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin/finder-app/writer
-	$(INSTALL) -m 0755 $(@D)/finder-app/writer.sh $(TARGET_DIR)/usr/bin/finder-app/writer.sh
-	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin/finder-app/finder.sh
-	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin/finder-app/finder-test.sh
-	$(INSTALL) -m 0755 $(@D)/finder-app/autorun-qemu.sh $(TARGET_DIR)/usr/bin/finder-app/autorun-qemu.sh
-	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/etc/finder-app/conf/
-	$(INSTALL) -m 0755 $(@D)/conf/* $(TARGET_DIR)/etc/finder-app/conf/
+	$(INSTALL) -m 0755 -D $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin/finder-app/writer
+	$(INSTALL) -m 0755 -D $(@D)/finder-app/writer.sh $(TARGET_DIR)/usr/bin/finder-app/writer.sh
+	$(INSTALL) -m 0755 -D $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin/finder-app/finder.sh
+	$(INSTALL) -m 0755 -D $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin/finder-app/finder-test.sh
+	$(INSTALL) -m 0755 -D $(@D)/finder-app/autorun-qemu.sh $(TARGET_DIR)/usr/bin/finder-app/autorun-qemu.sh
+	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/usr/bin/finder-app/conf/
+	$(INSTALL) -m 0755 -D $(@D)/conf/* $(TARGET_DIR)/usr/bin/finder-app/conf/
 	$(INSTALL) -m 0755 $(@D)/assignment-autotest/test/assignment4/* $(TARGET_DIR)/bin
 endef
 
